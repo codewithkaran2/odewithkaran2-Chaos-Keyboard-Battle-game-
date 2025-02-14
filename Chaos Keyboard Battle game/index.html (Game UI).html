@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Keyboard Battle</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            background: #222;
+            display: block;
+            margin: auto;
+            border: 2px solid white;
+        }
+        .keys {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .health-bar {
+            width: 200px;
+            height: 20px;
+            background-color: red;
+            position: absolute;
+            transition: width 0.2s;
+        }
+        .p1-health { left: 50px; top: 20px; }
+        .p2-health { right: 50px; top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Chaos Keyboard Battle</h1>
+    <div class="keys">
+        <h2>Player 1: <span id="p1Keys"></span></h2>
+        <h2>Player 2: <span id="p2Keys"></span></h2>
+    </div>
+    <div class="health-bar p1-health" id="p1HealthBar"></div>
+    <div class="health-bar p2-health" id="p2HealthBar"></div>
+    <canvas id="gameCanvas"></canvas>
+    <h2 id="winner"></h2>
+    <button onclick="restartGame()">Restart Game</button>
+    <script src="game.js"></script>
+</body>
+</html>
